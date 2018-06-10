@@ -36,6 +36,21 @@ public class ComponenteTest {
 	public void hasDivisible7() {
 		assertEquals("7QIX", comp.recibirNumero(7));
 	}
+	
+	@Test
+	public void hasTwoDivisibles() {
+		assertEquals("15FOOBAR", comp.recibirNumero(15));
+	}
+	
+	@Test
+	public void hasTwoDivisibles2() {
+		assertEquals("21FOOQIX", comp.recibirNumero(21));
+	}
+	
+	@Test
+	public void hasTwoDivisibles3() {
+		assertEquals("35BARQIX", comp.recibirNumero(35));
+	}
 
 	@Test
 	public void divisibleBy3() {
