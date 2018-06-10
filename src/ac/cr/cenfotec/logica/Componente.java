@@ -32,7 +32,7 @@ public class Componente {
 
 	@Override
 	public String toString() {
-		return " + numero + ";
+		return ""+numero+"";
 	}
 
 	public String recibirNumero(int pNumero) {
