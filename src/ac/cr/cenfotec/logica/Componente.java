@@ -42,7 +42,7 @@ public class Componente {
 	}
 
 	public String encontrarDivisible(int pNumero) {
-		String string = "";
+		String string ;
 		Componente componente = new Componente(pNumero);
 
 		if (divisiblePorTres(pNumero) && divisiblePorCinco(pNumero)) {
