@@ -22,6 +22,11 @@ public class ComponenteTest {
 		assertTrue(comp.divisiblePorTres(3));
 	}
 
+	@Test
+	public void divisibleBy5() {
+		assertTrue(comp.divisiblePorCinco(5));
+	}
+
 	
 
 }
