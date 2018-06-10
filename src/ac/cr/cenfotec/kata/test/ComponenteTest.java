@@ -3,18 +3,38 @@ package ac.cr.cenfotec.kata.test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import ac.cr.cenfotec.logica.Componente;
 
 public class ComponenteTest {
 
-	Componente comp = new Componente();
+	static Componente comp;
+
+	@Before
+	public void init() {
+		comp = new Componente();
+	}
 
 	@Test
-	public void itIsANumber() {
+	public void notDivisible() {
 		assertEquals("11", comp.recibirNumero(11));
+	}
 
+	@Test
+	public void hasDivisible3() {
+		assertEquals("3FOO", comp.recibirNumero(3));
+	}
+
+	@Test
+	public void hasDivisible5() {
+		assertEquals("5BAR", comp.recibirNumero(5));
+	}
+
+	@Test
+	public void hasDivisible7() {
+		assertEquals("7QIX", comp.recibirNumero(7));
 	}
 
 	@Test

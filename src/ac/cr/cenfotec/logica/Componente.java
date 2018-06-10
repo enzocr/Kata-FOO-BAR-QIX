@@ -13,8 +13,10 @@ package ac.cr.cenfotec.logica;
 public class Componente {
 
 	int numero;
+	String string;
 
 	public Componente() {
+		this.string = "";
 		this.numero = 0;
 	}
 
@@ -30,9 +32,17 @@ public class Componente {
 		this.numero = numero;
 	}
 
+	public String getString() {
+		return string;
+	}
+
+	public void setString(String string) {
+		this.string = string;
+	}
+
 	@Override
 	public String toString() {
-		return ""+numero+"";
+		return numero + string;
 	}
 
 	public String recibirNumero(int pNumero) {
@@ -42,32 +52,52 @@ public class Componente {
 	}
 
 	public String encontrarDivisible(int pNumero) {
-		String string ;
-		Componente componente = new Componente(pNumero);
+		String string = "";
+		// Componente componente = new Componente(pNumero);
 
 		if (divisiblePorTres(pNumero) && divisiblePorCinco(pNumero)) {
-			string = componente.toString() + "FOOBAR";
+			// componente.setString("FOOBAR");
+			// string = componente.toString();
+			string = "" + pNumero + "FOOBAR";
 		}
 
 		if (divisiblePorTres(pNumero) && divisiblePorSiete(pNumero)) {
-			string = componente.toString() + "FOOQIX";
+			// componente.setString("FOOQIX");
+			// string = componente.toString();
+			string += "" + pNumero + "";
+			string += "FOOQIX";
 		}
 
 		if (divisiblePorCinco(pNumero) && divisiblePorSiete(pNumero)) {
-			string = componente.toString() + "BARQIX";
+			// componente.setString("BARQIX");
+			// string = componente.toString();
+			string += "" + pNumero + "";
+			string += "BARQIX";
 		}
 
 		if (divisiblePorTres(pNumero)) {
-			string = componente.toString() + "FOO";
+			// componente.setString("FOO");
+			// string = componente.toString();
+			string += "" + pNumero + "";
+			string += "FOO";
 		}
 
 		if (divisiblePorCinco(pNumero)) {
-			string = componente.toString() + "BAR";
+			// componente.setString("BAR");
+			// string = componente.toString();
+			string += "" + pNumero + "";
+			string += "BAR";
 		}
 		if (divisiblePorSiete(pNumero)) {
-			string = componente.toString() + "QIX";
-		} else {
-			string = componente.toString();
+			// componente.setString("QIX");
+			// string = componente.toString();
+			string += "" + pNumero + "";
+			string += "QIX";
+		}
+		if (!divisiblePorTres(pNumero) && !divisiblePorCinco(pNumero) && !divisiblePorSiete(pNumero)) {
+			// componente.setString("");
+			// string = componente.toString();
+			string += "" + pNumero + "";
 		}
 
 		return string;
