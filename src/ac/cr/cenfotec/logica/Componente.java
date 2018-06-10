@@ -1,5 +1,6 @@
 package ac.cr.cenfotec.logica;
 
+
 /*
  * Kata FOO-BAR-QIX Un componente recibe numeros y retorna codigos para imprimir
  * El programa retorna el mismo numero como String. (Recibe 3 -entero- retorna
@@ -50,7 +51,8 @@ public class Componente {
 		return cadena;
 	}
 
-	public String recibirNumero(int pNumero) {
+	public String recibirNumero(int pNumero)throws Exception {
+		
 
 		return encontrarDivisible(pNumero);
 

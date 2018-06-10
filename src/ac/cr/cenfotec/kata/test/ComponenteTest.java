@@ -17,53 +17,52 @@ public class ComponenteTest {
 		comp = new Componente();
 	}
 
-	@Test
-	public void notDivisible() {
+	public void notDivisible() throws Exception {
 		assertEquals("11", comp.recibirNumero(11));
 	}
 
 	@Test
-	public void hasDivisible3() {
+	public void hasDivisible3() throws Exception {
 		assertEquals("3FOO", comp.recibirNumero(3));
 	}
 
 	@Test
-	public void hasDivisible5() {
+	public void hasDivisible5() throws Exception {
 		assertEquals("5BAR", comp.recibirNumero(5));
 	}
 
 	@Test
-	public void hasDivisible7() {
+	public void hasDivisible7() throws Exception {
 		assertEquals("7QIX", comp.recibirNumero(7));
 	}
-	
+
 	@Test
-	public void hasTwoDivisibles() {
+	public void hasTwoDivisibles() throws Exception {
 		assertEquals("15FOOBAR", comp.recibirNumero(15));
 	}
-	
+
 	@Test
-	public void hasTwoDivisibles2() {
+	public void hasTwoDivisibles2() throws Exception {
 		assertEquals("21FOOQIX", comp.recibirNumero(21));
 	}
-	
+
 	@Test
-	public void hasTwoDivisibles3() {
+	public void hasTwoDivisibles3() throws Exception {
 		assertEquals("35BARQIX", comp.recibirNumero(35));
 	}
 
 	@Test
-	public void divisibleBy3() {
+	public void divisibleBy3() throws Exception {
 		assertTrue(comp.divisiblePorTres(3));
 	}
 
 	@Test
-	public void divisibleBy5() {
+	public void divisibleBy5() throws Exception {
 		assertTrue(comp.divisiblePorCinco(5));
 	}
 
 	@Test
-	public void divisibleBy7() {
+	public void divisibleBy7() throws Exception {
 		assertTrue(comp.divisiblePorSiete(7));
 	}
 
