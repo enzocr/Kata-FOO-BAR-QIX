@@ -27,6 +27,9 @@ public class ComponenteTest {
 		assertTrue(comp.divisiblePorCinco(5));
 	}
 
-	
+	@Test
+	public void divisibleBy7() {
+		assertTrue(comp.divisiblePorSiete(7));
+	}
 
 }
